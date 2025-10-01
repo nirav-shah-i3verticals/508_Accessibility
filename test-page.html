@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Page for 508 Compliance</title>
+    <style>
+        .low-contrast {
+            color: #999;
+            background-color: #ccc;
+        }
+        .good-contrast {
+            color: #000;
+            background-color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <h1>Test Page for Section 508 Accessibility Testing</h1>
+    
+    <!-- Good accessibility practices -->
+    <h2>This page has accessibility issues to test our scanner</h2>
+    
+    <!-- Image without alt text - violation -->
+    <img src="https://via.placeholder.com/150" />
+    
+    <!-- Image with alt text - good -->
+    <img src="https://via.placeholder.com/150" alt="Placeholder image for testing" />
+    
+    <!-- Form without labels - violation -->
+    <form>
+        <input type="text" placeholder="Name" />
+        <input type="email" placeholder="Email" />
+        
+        <!-- Form with proper labels - good -->
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" />
+        
+        <button type="submit">Submit</button>
+    </form>
+    
+    <!-- Low contrast text - violation -->
+    <div class="low-contrast">
+        This text has poor contrast and may be hard to read.
+    </div>
+    
+    <!-- Good contrast text -->
+    <div class="good-contrast">
+        This text has good contrast and is easy to read.
+    </div>
+    
+    <!-- Links without descriptive text - violation -->
+    <a href="#">Click here</a>
+    
+    <!-- Good link text -->
+    <a href="#content">Skip to main content</a>
+    
+    <!-- Missing heading structure -->
+    <h4>This is an H4 without H2 or H3 before it</h4>
+    
+    <div id="content">
+        <p>This is the main content area.</p>
+    </div>
+</body>
+</html>
