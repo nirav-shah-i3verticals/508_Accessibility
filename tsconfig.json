@@ -10,5 +10,14 @@
     "incremental": true,
     "tsBuildInfoFile": "./lib/.tsbuildinfo",
     "esModuleInterop": true
-  }
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "test-*.ts",
+    "test-*.js",
+    "lib/**/*",
+    "node_modules"
+  ]
 }

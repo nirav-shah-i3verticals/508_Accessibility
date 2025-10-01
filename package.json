@@ -1,18 +1,36 @@
 {
-  "name": "508accessability",
-  "version": "0.0.1",
-  "description": "Section 508 Accessibility Compliance Checking MCP Server",
+  "name": "508-accessibility-mcp-server",
+  "version": "1.0.0",
+  "description": "Section 508 Accessibility Compliance Checking MCP Server for web accessibility testing",
   "main": "./lib/src/index.js",
+  "bin": {
+    "508-accessibility-mcp": "./lib/src/index.js"
+  },
+  "files": [
+    "lib/src/**/*",
+    "README.md",
+    "LICENSE",
+    "MCP_CONFIGURATION.md"
+  ],
+  "keywords": [
+    "mcp",
+    "accessibility",
+    "section-508",
+    "wcag",
+    "compliance",
+    "web-testing"
+  ],
   "scripts": {
     "dev:sse": "nodemon --exec node --inspect=9239 --signal SIGINT -r ts-node/register ./src/index.ts sse",
     "dev:stdio": "nodemon --quiet --exec node --signal SIGINT -r ts-node/register ./src/index.ts stdio",
     "dev:inspector": "mcp-inspector",
     "build": "tsc --build",
+    "prepublishOnly": "npm run build",
     "start:sse": "node ./lib/src/index.js sse",
-    "start:sdtio": "node ./lib/src/index.js stdio"
+    "start:stdio": "node ./lib/src/index.js stdio"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Your Name <your.email@example.com>",
+  "license": "MIT",
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.7.0",
     "express": "^4.21.2",

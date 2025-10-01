@@ -146,12 +146,42 @@ This server tests compliance against all WCAG 2.0 Level A and AA success criteri
 
 ### Installation
 
-1. Install dependencies:
+#### For End Users (VS Code Integration)
+
+Install globally via npm:
+```bash
+npm install -g 508-accessibility-mcp-server
+```
+
+Then configure in VS Code using the AI Toolkit extension or by adding to your MCP configuration:
+```json
+{
+  "servers": {
+    "508-accessibility": {
+      "type": "stdio",
+      "command": "508-accessibility-mcp",
+      "args": ["stdio"]
+    }
+  }
+}
+```
+
+See [MCP_CONFIGURATION.md](./MCP_CONFIGURATION.md) for detailed VS Code setup instructions.
+
+#### For Development
+
+1. Clone the repository:
+```bash
+git clone <repository-url>
+cd 508-accessibility-mcp-server
+```
+
+2. Install dependencies:
 ```bash
 npm install
 ```
 
-2. Build the project:
+3. Build the project:
 ```bash
 npm run build
 ```
@@ -166,7 +196,7 @@ The server will start on port 3001 with hot reload.
 
 #### STDIO Mode (for production/integration)
 ```bash
-node dist/index.js stdio
+node lib/src/index.js stdio
 ```
 
 #### Using with MCP Inspector
