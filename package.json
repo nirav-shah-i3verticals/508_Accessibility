@@ -27,7 +27,11 @@
     "build": "tsc --build",
     "prepublishOnly": "npm run build",
     "start:sse": "node ./lib/src/index.js sse",
-    "start:stdio": "node ./lib/src/index.js stdio"
+    "start:stdio": "node ./lib/src/index.js stdio",
+    "test": "npm run test:unit && npm run test:integration",
+    "test:unit": "node test/unit/test-auth-features.js && node test/unit/test-csv-format.js && node test/unit/test-multipage.js",
+    "test:integration": "node -r ts-node/register test/integration/test-mcp.ts",
+    "test:mcp": "node -r ts-node/register test/integration/test-mcp.ts"
   },
   "author": "Your Name <your.email@example.com>",
   "license": "MIT",

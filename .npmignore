@@ -4,12 +4,11 @@ tsconfig.json
 .vscode/
 .aitk/
 
+# Test files and directory
+test/
+
 # Development files
-test-*.js
-test-*.ts
-test-*.html
 nodemon.json
-lib/test-*
 lib/.tsbuildinfo
 
 # Build artifacts
@@ -18,8 +17,6 @@ node_modules/
 *.tmp
 
 # Testing and development
-test/
-tests/
 coverage/
 
 # IDE files

@@ -99,7 +99,7 @@ The published package includes:
 
 Files excluded from distribution (via `.npmignore`):
 - `src/` - TypeScript source files
-- `test-*` files
+- `test/` - Test files and directories
 - Development configuration files
 - Build artifacts and temporary files
 

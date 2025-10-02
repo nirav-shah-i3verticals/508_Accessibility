@@ -205,6 +205,34 @@ npm run dev:inspector
 ```
 Opens the MCP Inspector for testing tools interactively.
 
+### Testing
+
+The project includes comprehensive tests organized in the `test/` directory:
+
+#### Run All Tests
+```bash
+npm test
+```
+
+#### Run Specific Test Types
+```bash
+# Unit tests only
+npm run test:unit
+
+# Integration tests only  
+npm run test:integration
+
+# Individual MCP server test
+npm run test:mcp
+```
+
+#### Test Structure
+- `test/fixtures/` - Test HTML pages and static test files
+- `test/unit/` - Unit tests for individual components
+- `test/integration/` - Full MCP server integration tests
+
+See [test/README.md](./test/README.md) for detailed testing information.
+
 ## Dependencies
 
 ### Core MCP Framework
